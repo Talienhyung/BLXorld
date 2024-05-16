@@ -1,0 +1,56 @@
+from Programme.choix import *
+from Programme.fonctionText import *
+from Programme.classPronom import *
+n=0
+
+def LaBoulangereScene1(game_state):
+    LaBoulangere.NewNom("La boulangère")
+    afficher_texte(surface, "Vous decidez de vous rendre à la boulangerie", game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue_utilisateur(surface, "Bonjour", Boulangerie1, LaBoulangere, 5, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue(surface, "Pardon ?", Boulangerie1, LaBoulangere, 6, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue_utilisateur(surface, "BONJOUR !", Boulangerie2, LaBoulangere, 1, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue(surface, "C'est pour ?", Boulangerie1, LaBoulangere, 7, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue_utilisateur(surface, "Une baguette s'il vous plaît...", Boulangerie1, LaBoulangere, 1, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue(surface, "Quoi ?", Boulangerie1, LaBoulangere, 2, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue_utilisateur(surface, "Du... du pain...", Boulangerie1, LaBoulangere, 1, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue(surface, "...quoi ?", Boulangerie1, LaBoulangere, 2, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue_utilisateur(surface, "Du PAIN !", Boulangerie2, LaBoulangere, 8, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue(surface, "...", Boulangerie1, LaBoulangere, 7, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue_utilisateur(surface, "...", Boulangerie1, LaBoulangere, 8, game_state)
+    pygame.time.wait(n)
+    afficher_texte_dialogue(surface, "...", Boulangerie1, LaBoulangere, 7, game_state)
+    pygame.time.wait(n)
+    choix = faire_un_choix(Boulangerie1, "Surprise ^^", "Le vol", "Choix de riche", 3, [1,2,3], game_state)
+    if choix ==1:
+        afficher_texte_dialogue_utilisateur(surface, "UNE BRAGUETTE", Boulangerie2, LaBoulangere, 8, game_state)
+        pygame.time.wait(n)
+        afficher_texte_dialogue(surface, "....", Boulangerie1, LaBoulangere, 3, game_state)
+        pygame.time.wait(n)
+        afficher_texte_dialogue_utilisateur(surface, "....", Boulangerie1, LaBoulangere, 3, game_state)
+        pygame.time.wait(n)
+        afficher_texte_dialogue(surface, "ok", Boulangerie1, LaBoulangere, 2, game_state)
+        pygame.time.wait(n)
+    if choix ==2:
+        afficher_texte_dialogue_utilisateur(surface, "(Prend la marchandise et part en courant)", Boulangerie3, utilisateur, 3, game_state)
+        pygame.time.wait(n)
+    if choix ==1:
+        afficher_texte_dialogue_utilisateur(surface, "Du petit-épautre je vous prie.", Boulangerie1, LaBoulangere, 8, game_state)
+        pygame.time.wait(n)
+        afficher_texte_dialogue(surface, "....", Boulangerie1, LaBoulangere, 3, game_state)
+        pygame.time.wait(n)
+        afficher_texte_dialogue_utilisateur(surface, "....", Boulangerie1, LaBoulangere, 3, game_state)
+        pygame.time.wait(n)
+        afficher_texte_dialogue(surface, "ok", Boulangerie1, LaBoulangere, 2, game_state)
+        pygame.time.wait(n)
+
